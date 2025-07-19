@@ -43,11 +43,7 @@
   </ros2_control>
   <gazebo>
     <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-<<<<<<< HEAD
-      <parameters>/home/farhan/colcon_ws/install/custom_husky/share/custom_husky/config/control.yaml</parameters>
-=======
       <parameters>/home/farhan/test_ws/install/custom_husky/share/custom_husky/config/control.yaml</parameters>
->>>>>>> 21d0bad (add nav2)
     </plugin>
   </gazebo>
   <material name="white">
@@ -271,11 +267,8 @@
     <sensor name="velodyne_lidar" type="gpu_ray">
       <pose>0 0 0 0 0 0</pose>
       <visualize>false</visualize>
-<<<<<<< HEAD
       <update_rate>20</update_rate>
-=======
       <update_rate>30</update_rate>
->>>>>>> 21d0bad (add nav2)
       <ray>
         <scan>
           <horizontal>
@@ -377,11 +370,8 @@
     <sensor name="depth_camera" type="depth">
       <always_on>true</always_on>
       <visualize>true</visualize>
-<<<<<<< HEAD
       <update_rate>30</update_rate>
-=======
       <update_rate>15</update_rate>
->>>>>>> 21d0bad (add nav2)
       <pose>0 0 0 0 0 0</pose>
       <depth_camera name="depth_cam">
         <horizontal_fov>2</horizontal_fov>
