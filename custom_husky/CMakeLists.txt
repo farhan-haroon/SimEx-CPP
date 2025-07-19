@@ -27,11 +27,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-<<<<<<< HEAD
-install(DIRECTORY launch worlds urdf config
-=======
 install(DIRECTORY launch worlds urdf config models
->>>>>>> 21d0bad (add nav2)
   DESTINATION share/${PROJECT_NAME}/
 )
 
