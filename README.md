@@ -28,5 +28,12 @@ git clone https://github.com/introlab/rtabmap_ros.git
 cd .. && colcon build --symlink-install
 ```
 
-+ Modify the `rtabmap.launch.py` file to subscrib to simulation topics
++ Replace the `rtabmap.launch.py` file with the one at /extras/launch/rtabmap.launch.py [provided in this repo]
++ Replace the `rgbd.rviz`file with the one at /extras/rviz/rtabmap/rgbd.rviz [provided in this repo]
+
++ Launch `RTAB-Map`:
+```
+ros2 launch rtabmap_launch rtabmap.launch.py
+```
+
 
