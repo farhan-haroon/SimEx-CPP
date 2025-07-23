@@ -33,7 +33,7 @@ def generate_launch_description():
             'maps',
             'rtabmap.yaml'))
 
-    param_file_name = 'test.yaml'
+    param_file_name = 'custom_husky.yaml'
     param_dir = LaunchConfiguration(
         'params_file',
         default=os.path.join(
@@ -61,7 +61,7 @@ def generate_launch_description():
 
         DeclareLaunchArgument(
             'use_sim_time',
-            default_value='false',
+            default_value='true',
             description='Use simulation (Gazebo) clock if true'),
 
         IncludeLaunchDescription(
