@@ -17,3 +17,16 @@ The robot_state_publisher used the static `.urdf` file instead of the `.urdf.xac
 ros2 run xacro xacro -o husky_ugv.urdf husky_ugv.urdf.xacro
 ```
 The robot_state_publisher used the static `.urdf` file instead of the `.urdf.xacro` one to publish the robot description on the `/robot_description` topic.
+
+# SLAM with Custom Husky
+
++ Clone and build the `rtabmap-ros` package into a separate workspace
+```
+mkdir -p ~/rtabmap_ws/src/
+cd ~/rtabmap_ws/src/
+git clone https://github.com/introlab/rtabmap_ros.git
+cd .. && colcon build --symlink-install
+```
+
++ Modify the `rtabmap.launch.py` file to subscrib to simulation topics
+
