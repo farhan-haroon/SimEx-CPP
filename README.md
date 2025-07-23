@@ -1,3 +1,6 @@
+> [!NOTE]
+> The `/diff_drive_controller` topic needs to be remapped explicitly to `/cmd_vel` in order to teleoprate the UGV manually or autonomously.
+
 # Custom Husky
 
 + This pacakge uses the ROS2 Control plugin - `libgazebo_ros2_control.so` to control the robot. The parameters can be tuned in the file - `control.yaml` at `/custom_husky/config/control.yaml`
