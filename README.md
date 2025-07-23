@@ -1,5 +1,5 @@
 > [!NOTE]
-> The `/diff_drive_controller` topic needs to be remapped explicitly to `/cmd_vel` in order to teleoprate the UGV manually or autonomously.
+> The `/diff_drive_controller/cmd_vel` topic needs to be remapped explicitly to `/cmd_vel` in order to teleoprate the UGV manually or autonomously.
 
 # Custom Husky
 
