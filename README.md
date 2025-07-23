@@ -36,4 +36,24 @@ cd .. && colcon build --symlink-install
 ros2 launch rtabmap_launch rtabmap.launch.py
 ```
 
+# Autonomous Navigation
 
+## Install Nav2 packages for ROS 2 Humble
+```
+sudo apt-get install ros-humble-navigation2 ros-humble-nav2-bringup
+```
+
+## Navigation after SLAM
+
++ Copy the map image and yaml files to **/custom_husky_nav2/maps/**
++ Launch Navigation
+```
+ros2 launch custom_husky_nav2 nav2.launch.py
+```
+
+## Navigation while SLAM
+
++ Launch Navigation while RTAB-Map SLAM is running
+```
+ros2 launch nav2_bringup navigation.launch.py use_sim_time:=true
+```
