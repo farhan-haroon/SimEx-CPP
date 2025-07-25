@@ -48,7 +48,7 @@ sudo apt-get install ros-humble-navigation2 ros-humble-nav2-bringup
 
 ## Navigation after SLAM
 
-+ Copy the map image and yaml files to **/custom_husky_nav2/maps/**
++ Copy the map image and yaml file to **/custom_husky_nav2/maps/**
 + Launch Navigation
 ```
 ros2 launch custom_husky_nav2 nav2.launch.py use_sim_time:=true
