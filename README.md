@@ -60,3 +60,7 @@ ros2 launch custom_husky_nav2 nav2.launch.py
 ```
 ros2 launch nav2_bringup navigation.launch.py use_sim_time:=true
 ```
+
+# Exploration (Frontier Based)
+
+Repo: https://github.com/AniArka/Autonomous-Explorer-and-Mapper-ros2-nav2
