@@ -43,7 +43,7 @@
   </ros2_control>
   <gazebo>
     <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-      <parameters>/home/farhan/test_ws/install/custom_husky/share/custom_husky/config/control.yaml</parameters>
+      <parameters>/home/farhan/colcon_ws/install/custom_husky/share/custom_husky/config/control.yaml</parameters>
     </plugin>
   </gazebo>
   <material name="white">
