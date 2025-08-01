@@ -1,6 +1,6 @@
 # Introduction
 
-This repository is the simulation demonstration of all necessary algorithms and/or methods required for implementing a fully autonomous exploration based SLAM and coverage path planning to find objects of interest in an unseen indoors/outdoors environment without any human intervention whatsoever. The robot used is a 4-wheeled differential drive robot with a 3D LiDAR and a depth camera for vision based SLAM and the system is buit and tested upon ROS 2 Humble with Gazebo classic. The pose-graph based RTAB-Map algorithm is used for the SLAM part and the UGV is integrated with the ROS 2 Navigation stack for autonomous navigation.
+This repository is the simulation demonstration of all necessary algorithms and/or methods required for implementing a fully autonomous exploration based SLAM and coverage path planning to find objects of interest in an unseen indoors/outdoors environment without any human intervention whatsoever. The robot used is a 4-wheeled differential drive robot with a 3D LiDAR and a depth camera for vision based SLAM and the system is built and tested upon ROS 2 Humble with Gazebo classic. The pose-graph based RTAB-Map algorithm is used for the SLAM part and the UGV is integrated with the ROS 2 Navigation stack for autonomous navigation.
 
 > [!NOTE]
 > The `/diff_drive_controller/cmd_vel` topic needs to be remapped explicitly to `/cmd_vel` in order to teleoprate the UGV manually or autonomously.
