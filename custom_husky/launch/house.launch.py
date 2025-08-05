@@ -22,8 +22,8 @@ def generate_launch_description():
     ])
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
-    x_pose = LaunchConfiguration('x_pose', default='-2.0')
-    y_pose = LaunchConfiguration('y_pose', default='1.0')
+    x_pose = LaunchConfiguration('x_pose', default='-1.0')
+    y_pose = LaunchConfiguration('y_pose', default='0.0')
 
     world = os.path.join(
         get_package_share_directory('custom_husky'),
@@ -60,6 +60,15 @@ def generate_launch_description():
             'y_pose': y_pose
         }.items()
     )
+    
+    joint_state_publisher_cmd = Node(
+    	package="joint_state_publisher",
+    	executable="joint_state_publisher",
+    	name="joint_state_publisher",
+    	output="screen",
+    	parameters=[{'use_sim_time': True}]
+    )
+
 
     spawn_diff_drive_controller = Node(
         package = "controller_manager",
@@ -82,6 +91,30 @@ def generate_launch_description():
         output = "screen"
     )
 
+    pcl_to_ls = Node(
+        package = "pointcloud_to_laserscan",
+        executable = "pointcloud_to_laserscan_node",
+        name = "pointcloud_to_laserscan",
+        remappings = [
+            ('cloud_in', '/velodyne_points'),
+            ('scan', '/scan')
+        ],
+        parameters = [{
+            'target_frame': 'velodyne',
+            'transform_tolerance': 0.05,
+            'min_height': -0.65,
+            'max_height': 0.65,
+            'angle_min': -3.14,
+            'angle_max': 3.14,
+            'angle_increment': 0.0087,
+            'scan_time': 0.05,
+            'range_min': 0.2,
+            'range_max': 10.0,
+            'use_inf': True,
+            'inf_epsilon': 2.0
+        }]
+    )
+
     ld = LaunchDescription()
 
     # Add the commands to the launch description
@@ -89,7 +122,10 @@ def generate_launch_description():
     ld.add_action(gzclient_cmd)
     ld.add_action(robot_state_publisher_cmd)
     ld.add_action(spawn_custom_husky_cmd)
+    ld.add_action(joint_state_publisher_cmd)    
     ld.add_action(ros2_controller_manager)
+    ld.add_action(pcl_to_ls)
+
     ld.add_action(
         TimerAction(
             period=1.0,
