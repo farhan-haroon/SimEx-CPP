@@ -11,7 +11,7 @@ class MapSubscriber(Node):
     def __init__(self):
         super().__init__('map_subscriber')
 
-        self.cell_size = 1.0  # 2D x 2D cell (D = 1.5 m)
+        self.cell_size = 0.8  # 2D x 2D cell (D = 1.5 m)
         self.grid_received = False
 
         self.subscription = self.create_subscription(
