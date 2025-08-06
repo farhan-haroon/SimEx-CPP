@@ -20,8 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        	'planner = stc_cpp.path_planner:main',
-            'tester = stc_cpp.test:main',
+        	'offline = stc_cpp.planner_offline:main',
+            'online = stc_cpp.planner_online:main',
         ],
     },
 )
