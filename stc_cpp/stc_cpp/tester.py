@@ -11,7 +11,7 @@ class MapSubscriber(Node):
     def __init__(self):
         super().__init__('stc_planner')
 
-        self.cell_size = 0.8  # 2D × 2D where D = 1m → cell_size = 2m
+        self.cell_size = 0.8  # 2D × 2D where D = 0.4m → cell_size = 0.8m
         self.robot_position = (0.0, 0.0)  # assume starting at odom (0,0)
 
         self.map_sub = self.create_subscription(
