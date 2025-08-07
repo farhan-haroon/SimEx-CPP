@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
         	'offline = stc_cpp.planner_offline:main',
             'online = stc_cpp.planner_online:main',
+            'tester = stc_cpp.tester:main',
         ],
     },
 )
